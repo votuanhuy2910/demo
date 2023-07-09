@@ -1,22 +1,29 @@
 <?php
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$gender = $_POST['gender'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$number = $_POST['number'];
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'ueh_demo';
 
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'ueh_demo');
-if ($conn->connect_error) {
-    echo "$conn->connect_error";
-    die("Connection Failed : " . $conn->connect_error);
-} else {
-    $stmt = $conn->prepare("insert into form(firstName, lastName, gender, email, password, number) values(?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssi", $firstName, $lastName, $gender, $email, $password, $number);
-    $execval = $stmt->execute();
-    echo $execval;
-    echo "Registration successfully...";
-    $stmt->close();
-    $conn->close();
+$mysqli = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+mysqli_set_charset($mysqli, 'UTF8');
+
+if (isset($_POST['submit'])) {
+    $cccd = $_POST['CCCD'];
+    $name = $_POST['name'];
+    $schoolName = $_POST['school_name'];
+    $number = $_POST['number'];
+    $gender = $_POST['gender'];
+
+    if (!empty($cccd) && !empty($name) && !empty($schoolName) && !empty($number) && !empty($gender)) {
+
+        $result = mysqli_query($mysqli, "INSERT INTO users values ('', '$cccd', '$name', '$schoolName', '$number', '$gender')");
+        // mã hóa md5 password -> md5('$password')
+        if ($result) {
+            echo "Success";
+        } else {
+            echo "Failed";
+        }
+    } else {
+        echo "Please type information";
+    }
 }
