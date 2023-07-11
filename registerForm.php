@@ -17,7 +17,7 @@
                 </div>
                 <!-- controllers/regisForm.php -->
                 <div class="panel-body">
-                    <form action="controllers/regisForm.php" method="POST">
+                    <form action="registerFormCode.php" method="POST">
                         <div class="form-group">
                             <label for="CCCD">CCCD</label>
                             <input type="text" class="form-control" id="CCCD" name="CCCD" />

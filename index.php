@@ -1,1 +1,1 @@
-<?php require_once("public/template/index.php") ?>
+<?php require_once("methodOne.php") ?>

@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <div style="background: #005f69;">
+        <?php include("components/header.php") ?>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12 mt-4">
@@ -23,7 +26,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <form action="controllers/resultMethodOne.php" method="POST" accept-charset="utf-8">
+                                <form action="methodOneCode.php" method="POST" accept-charset="utf-8">
                                     <div class="form-group mb-3">
                                         <input type="text" name="get_CCCD" class="form-control" placeholder="Type CCCD" maxlength="12" required>
                                     </div>

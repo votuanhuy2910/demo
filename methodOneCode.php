@@ -23,14 +23,13 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <a class="btn btn-primary" href="../index.php">Back to home</a>
+                                <a class="btn btn-primary" href="index.php">Back to home</a>
                             </div>
                         </div>
                         <div class="table-responsive">
                             <table class="table table-bordered mt-3">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
                                         <th scope="col">CCCD</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">School name</th>
@@ -52,7 +51,6 @@
                                             while ($row = mysqli_fetch_array($query_run)) {
                                     ?>
                                                 <tr>
-                                                    <td><?php echo $row['id']; ?></td>
                                                     <td><?php echo $row['CCCD']; ?></td>
                                                     <td><?php echo $row['name']; ?></td>
                                                     <td><?php echo $row['school_name']; ?></td>
@@ -63,8 +61,8 @@
                                             }
                                         } else {
                                             ?>
-                                            <tr colspan="6">
-                                                <td>Data fail</td>
+                                            <tr>
+                                                <td style="text-align: center;" colspan="6">Data Fail</td>
                                             </tr>
                                     <?php
                                         }
