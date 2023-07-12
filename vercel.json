@@ -1,7 +1,19 @@
 {
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
-  }
+	"functions": {
+		"api/*.php": {
+			"runtime": "vercel-php@0.6.0"
+		}
+	},
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "index.php",
+			"methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+			"headers": {
+				"Access-Control-Allow-Origin": "https://demo-six-gilt-70.vercel.app",
+				"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+				"Content-Type": "application/json"
+			}
+		}
+	]
 }
