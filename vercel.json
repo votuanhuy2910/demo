@@ -7,7 +7,7 @@
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/methodOne.php"
+			"dest": "/index.php"
 		}
 	],
 	"headers": [
@@ -20,7 +20,7 @@
 				},
 				{
 					"key": "Access-Control-Allow-Origin",
-					"value": "https://demo-six-gilt-70.vercel.app"
+					"value": "https://demo-six-gilt-70.vercel.app/index.php"
 				},
 				{
 					"key": "Access-Control-Allow-Methods",
