@@ -7,12 +7,12 @@
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/api/index.php"
+			"dest": "/methodOne.php"
 		}
 	],
 	"headers": [
 		{
-			"source": "/api/(.*)",
+			"source": "/(.*)",
 			"headers": [
 				{
 					"key": "Access-Control-Allow-Credentials",
