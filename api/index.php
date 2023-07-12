@@ -1,2 +1,1 @@
-<?php
-phpinfo();
+<?php require_once("methodOne.php") ?>
