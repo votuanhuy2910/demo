@@ -1,19 +1,20 @@
-<html>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar py-0" href="#">
+                <img src="https://ueh.edu.vn/images/logo-header.png" alt="" width="63" height="36">
+            </a>
 
-<body>
-    <div class="container">
-        <nav class="navbar navbar-light">
-            <div class="container-fluid" style="padding: 0 0;">
-                <a class="navbar-brand" href="#">
-                    <img src="https://ueh.edu.vn/images/logo-header.png" alt="" width="63" height="36" class="d-inline-block align-text-top">
-                </a>
-
-                <a class="navbar-brand text-white bg-danger rounded px-2 mx-0" href="#">
-                    Trang chủ
-                </a>
-            </div>
-        </nav>
-    </div>
-</body>
-
-</html>
+            <h2 class="navbar py-0 text-white text-center">
+                tuyen sinh 2023
+                <br>
+                dai hoc kinh te thanh pho ho chi minh
+            </h2>
+            
+            <a href="../index.php" class="text-white fs-2">
+                <i class="bi bi-house-door"></i>
+                Trang chu
+            </a>
+        </div>
+    </nav>
+</header>
