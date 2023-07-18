@@ -7,6 +7,15 @@
     <?php include "components/head.php" ?>
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        <?php include "assets/css/style.css" ?>
+    </style>
+
     <title>signup</title>
 </head>
 
@@ -16,7 +25,7 @@
     <main>
         <div class="container d-flex flex-column">
             <div class="infor-person border-bottom border-2 mb-3 d-flex align-items-center">
-                <h1>THONG TIN CA NHAN</h1>
+                <h1 class="text-capitalize">thông tin cá nhân</h1>
 
                 <?php include "message.php" ?>
             </div>

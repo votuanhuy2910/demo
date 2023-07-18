@@ -5,15 +5,15 @@
                 <img src="https://ueh.edu.vn/images/logo-header.png" alt="" width="63" height="36">
             </a>
 
-            <h2 class="navbar py-0 text-white text-center">
-                tuyen sinh 2023
+            <h2 class="navbar py-0 text-white text-center text-capitalize">
+                tuyển sinh 2023
                 <br>
-                dai hoc kinh te thanh pho ho chi minh
+                đại học kinh tế thành phố hồ chí minh
             </h2>
             
-            <a href="../index.php" class="text-white fs-2">
+            <a href="../index.php" class="text-white text-capitalize fs-2">
                 <i class="bi bi-house-door"></i>
-                Trang chu
+                trang chủ
             </a>
         </div>
     </nav>
