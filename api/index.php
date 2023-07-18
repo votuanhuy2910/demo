@@ -1,2 +1,2 @@
 <?php
-phpinfo();
+require_once "../index.php";
