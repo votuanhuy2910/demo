@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar">
-        <div class="container">
+        <div class="container header">
             <a class="navbar py-0" href="#">
                 <img src="https://ueh.edu.vn/images/logo-header.png" alt="" width="63" height="36">
             </a>
@@ -11,7 +11,7 @@
                 đại học kinh tế thành phố hồ chí minh
             </h2>
             
-            <a href="../index.php" class="text-white text-capitalize fs-2">
+            <a href="../index.php" class="text-white text-capitalize fs-2 home">
                 <i class="bi bi-house-door"></i>
                 trang chủ
             </a>

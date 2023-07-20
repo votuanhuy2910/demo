@@ -7,6 +7,10 @@
     <?php include "../components/head.php" ?>
     <link rel="stylesheet" href="../assets/css/style.css">
 
+    <style>
+        <?php include "../assets/css/style.css" ?>
+    </style>
+
     <title>signup</title>
 </head>
 
@@ -14,6 +18,5 @@
     <?php include "../components/header_admin.php" ?>
 
     hello to admin
-
 
     <?php require "../components/footer.php" ?>

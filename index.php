@@ -24,10 +24,11 @@
 
     <main>
         <div class="container d-flex flex-column">
+            <?php include "message.php" ?>
             <div class="infor-person border-bottom border-2 mb-3 d-flex align-items-center">
                 <h1 class="text-capitalize">thông tin cá nhân</h1>
 
-                <?php include "message.php" ?>
+
             </div>
 
 
