@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 16, 2023 lúc 06:38 PM
--- Phiên bản máy phục vụ: 10.4.24-MariaDB
--- Phiên bản PHP: 7.4.29
+-- Host: 127.0.0.1
+-- Generation Time: Jul 27, 2023 at 10:21 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `ueh_demo`
+-- Database: `ueh_demo`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,10 +35,10 @@ CREATE TABLE `admin` (
   `role_as` tinyint(4) NOT NULL DEFAULT 0,
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `create_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `email`, `password`, `role_as`, `status`, `create_at`) VALUES
@@ -48,61 +48,70 @@ INSERT INTO `admin` (`id`, `username`, `email`, `password`, `role_as`, `status`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(100) NOT NULL,
-  `identification` varchar(12) NOT NULL,
   `name` varchar(25) NOT NULL,
+  `identification` varchar(12) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `address` varchar(100) NOT NULL,
+  `phone` varchar(10) NOT NULL,
   `city` varchar(100) NOT NULL,
-  `gender` enum('Nam','Nữ') NOT NULL,
-  `phone` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `district` varchar(50) NOT NULL,
+  `ward` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `gender` enum('Nam','Nữ') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `identification`, `name`, `email`, `address`, `city`, `gender`, `phone`) VALUES
-(46, '12312312312', 'Huy Võ', '1231231223123@gmail.com', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, Thành phố Hồ Chí Minh', '0789833953', 'Nam', '0789833953'),
-(47, '081236128391', 'Huy Võ', 'votuanhuy2910@gmail.com', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, Thành phố Hồ Chí Minh', '0789833953', 'Nam', '0789833953'),
-(48, '123123123534', 'Huỳnh Trúc Linh', '4401104097@student.hcmup.edu.vn', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, Thành phố Hồ Chí Minh', 'HCM', 'Nữ', '0789833953'),
-(49, '012837512683', 'HUỲNH TRÚC LINH', 'huynhtruclinh3001@gmail.com', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, thành phố hồ chí minh', 'Thành phố Hồ Chí Minh', 'Nữ', '0789833951');
+INSERT INTO `users` (`id`, `name`, `identification`, `email`, `phone`, `city`, `district`, `ward`, `address`, `gender`) VALUES
+(46, 'Huy Võ', '12312312312', '1231231223123@gmail.com', '0789833953', '0789833953', '', '', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, Thành phố Hồ Chí Minh', 'Nam'),
+(47, 'Huy Võ', '081236128391', 'votuanhuy2910@gmail.com', '0789833953', '0789833953', '', '', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, Thành phố Hồ Chí Minh', 'Nam'),
+(48, 'Huỳnh Trúc Linh', '123123123534', '4401104097@student.hcmup.edu.vn', '0789833953', 'HCM', '', '', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, Thành phố Hồ Chí Minh', 'Nữ'),
+(49, 'HUỲNH TRÚC LINH', '012837512683', 'huynhtruclinh3001@gmail.com', '0789833951', 'Thành phố Hồ Chí Minh', '', '', '981/8 Hương lộ 2, phường Bình Trị Đông A, quận Bình Tân, thành phố hồ chí minh', 'Nữ'),
+(50, 'võ tuấn huy', '078983391231', 'vohuy402@yahoo.com', '0789833962', '79', '777', '27448', 'hương lộ 2', 'Nam'),
+(51, 'Võ TUấN HUY', '018231287312', 'votuanhuy@gmail.com', '0123456789', '01', '001', '00001', 'hương lộ 2', 'Nam'),
+(52, 'HUỲNH TRÚC LINH', '012381762371', 'truclinh@gmail.com', '0123872137', '01', '003', '00100', 'ngõ 2', 'Nữ'),
+(53, '', '123123123123', 'mju@gmail.com', '', '', '', '', '', ''),
+(54, '', '12312312302', 'juydf@gmail.com', '', '', '', '', '', ''),
+(55, '', '', '2', '', '', '', '', '', ''),
+(56, 'HUỲNH TẤN PHÁT', '098251728293', 'phathuynh@gmail.com', '0362131237', '86', '858', '29626', '21 mỹ phước', 'Nam');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
