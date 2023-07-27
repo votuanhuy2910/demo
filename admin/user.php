@@ -1,17 +1,27 @@
 <?php
 session_start();
+
+include "../config/dbcon.php";
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php include "../components/head.php" ?>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        <?php include "../assets/css/style.css" ?>
+    </style>
+
+    <title>signup</title>
 </head>
 
 <body>
-    hello user
-</body>
+    <?php include "../components/header_admin.php" ?>
+    <?php include "../message.php" ?>
+    hello to user
 
-</html>
+    <?php require "../components/footer.php" ?>

@@ -42,7 +42,7 @@ if (isset($_POST['login-ad'])) {
         exit(0);
     }
 } else {
-    $_SESSION['message'] = "Lỗi đăng nhập";
+    $_SESSION['message'] = "Bạn không được phép truy cập vào file này";
     header("Location: ../login.php");
     exit(0);
 }

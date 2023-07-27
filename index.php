@@ -1,4 +1,14 @@
-<?php session_start() ?>
+<?php
+session_start();
+
+// if (isset($_SESSION['auth'])) {
+//     if (!isset($_SESSION['message'])) {
+//         $_SESSION['message'] = "Trang này dùng cho thí sinh đăng ký";
+//     }
+//     header("Location: admin/index.php");
+//     exit(0);
+// }
+?>
 
 <!DOCTYPE html>
 <html lang="en">

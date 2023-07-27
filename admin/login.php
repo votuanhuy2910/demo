@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php
+session_start();
+
+if (isset($_SESSION['auth'])) {
+    if (!isset($_SESSION['message'])) {
+        $_SESSION['message'] = "Bạn đã đăng nhập rồi";
+    }
+    header("Location: ../index.php");
+    exit(0);
+}
+?>
+
 <html lang="en">
 
 <head>
@@ -13,7 +24,6 @@
     <h1 class="fs-2 text-center text-white" style="margin: 3rem 0 5rem 0">Đăng Nhập Quản Trị Tuyển Sinh K49</h1>
     <div style="max-width: 500px; margin: auto;"><?php include "../message.php" ?></div>
     <main style="background: #eaeaea; max-width: 500px; margin: auto;">
-
 
         <form action="includes/loginCode.php" method="POST" class="fs-3 p-4">
             <h1 class="fs-2 text-center" style="color: #17a2b8">Đăng nhập</h1>

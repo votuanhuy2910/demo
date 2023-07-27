@@ -11,7 +11,7 @@
                 đại học kinh tế thành phố hồ chí minh
             </h2>
             
-            <a href="../index.php" class="text-white text-capitalize fs-2 home">
+            <a href="index.php" class="text-white text-capitalize fs-2 home">
                 <i class="bi bi-house-door"></i>
                 trang chủ
             </a>
