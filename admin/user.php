@@ -20,8 +20,17 @@ include "../config/dbcon.php";
 </head>
 
 <body>
-    <?php include "../components/header_admin.php" ?>
-    <?php include "../message.php" ?>
-    hello to user
+    <?php 
+    // include "../components/header_admin.php"
+
+    ?>
+
+    <?php 
+    // include "../message.php"
+
+    ?>
+    <!-- hello to user -->
+
+    <?php include "../errors/404.php" ?>
 
     <?php require "../components/footer.php" ?>
