@@ -25,34 +25,36 @@ $result = mysqli_query($conn, $query);
     <?php include "../components/header_admin.php" ?>
     <?php include "../message.php" ?>
 
-    <main>
-        <div class="container d-flex flex-column">
-            <div class="row mt-5">
+    <main style="margin-top: 0">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row">
                 <div class="col">
                     <div class="card mt-5">
                         <div class="card-body fs-3">
                             <table class="table table-bordered text-center">
                                 <tr class="bg-dark text-white">
-                                    <td>CCCD</td>
-                                    <td>NAME</td>
-                                    <td>EMAIL</td>
-                                    <td>CITY</td>
-                                    <td>ADDRESS</td>
-                                    <td>GENDER</td>
-                                    <td>PHONE</td>
+                                    <td style="vertical-align: middle">STT</td>
+                                    <td style="vertical-align: middle">Căn cước công dân</td>
+                                    <td style="vertical-align: middle">Họ tên</td>
+                                    <td style="vertical-align: middle">Email</td>
+                                    <td class="col-3" style="vertical-align: middle">Địa chỉ</td>
+                                    <td style="vertical-align: middle">Thành phố</td>
+                                    <td style="vertical-align: middle">Giới tính</td>
+                                    <td style="vertical-align: middle">Số điện thoại</td>
                                 </tr>
 
                                 <tr>
                                     <?php
                                     while ($row = mysqli_fetch_assoc($result)) {
                                     ?>
-                                        <td><?php echo $row['identification'] ?></td>
-                                        <td><?php echo $row['name'] ?></td>
-                                        <td><?php echo $row['email'] ?></td>
-                                        <td><?php echo $row['city'] ?></td>
-                                        <td><?php echo $row['address'] ?></td>
-                                        <td><?php echo $row['gender'] ?></td>
-                                        <td><?php echo $row['phone'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['id'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['identification'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['name'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['email'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['address'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['city'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['gender'] ?></td>
+                                        <td style="vertical-align: middle"><?php echo $row['phone'] ?></td>
                                 </tr>
                             <?php
                                     }

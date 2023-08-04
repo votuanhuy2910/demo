@@ -94,4 +94,6 @@
     <div class="col-12">
         <button class="btn btn-primary p-3 fs-3" type="submit" name="register-btn">Lưu</button>
     </div>
+
+    <?php include "signupWish.php" ?>
 </form>
